@@ -1,0 +1,63 @@
+DESCRIPTION,CODE,0
+General examination of patient (procedure),162673000,18701
+Well child visit (procedure),410620009,4637
+Encounter for problem (procedure),185347001,4502
+Encounter for symptom,185345009,4232
+Encounter for check up (procedure),185349003,4103
+Prenatal visit,424619006,2582
+Encounter for problem,185347001,2159
+Urgent care clinic (procedure),702927004,2038
+Follow-up encounter,390906007,1970
+Patient encounter procedure,308335008,1551
+Outpatient procedure,371883000,1519
+Administration of vaccine to produce active immunity (procedure),33879002,1379
+Patient encounter procedure (procedure),308335008,1280
+Consultation for treatment,698314001,1166
+Encounter for 'check-up',185349003,928
+Emergency room admission (procedure),50849002,773
+Prenatal initial visit,424441002,693
+Telemedicine consultation with patient,448337001,500
+Home visit (procedure),439708006,434
+Follow-up encounter (procedure),390906007,399
+Asthma follow-up,394701000,324
+Postnatal visit,169762003,304
+Obstetric emergency hospital admission,183460006,299
+Emergency Room Admission,50849002,286
+Encounter Inpatient,183452005,278
+Hypertension follow-up encounter,390906007,245
+Admission to hospice (procedure),305336008,183
+Postoperative follow-up visit (procedure),439740005,176
+Emergency Encounter,50849002,176
+Death Certification,308646001,170
+Encounter for symptom (procedure),185345009,159
+Admission to skilled nursing facility (procedure),449411000124106,150
+Screening surveillance (regime/therapy),410410006,127
+Drug rehabilitation and detoxification,56876005,124
+Domiciliary or rest home patient evaluation and management,210098006,88
+Gynecology service (qualifier value),310061009,83
+Office Visit,316744009,82
+Patient-initiated encounter,270427003,80
+Emergency hospital admission for asthma,183478001,66
+Follow-up visit (procedure),185389009,61
+Encounter for Problem,185347001,60
+Allergic disorder initial assessment,170837001,53
+Admission to intensive care unit (procedure),305351004,48
+Cardiac Arrest,410429000,47
+Encounter for problem (procedure),1853470,43
+Stroke,230690007,41
+Admission to surgical department,305408004,35
+Myocardial Infarction,22298006,31
+Allergic disorder follow-up assessment,170838006,25
+Hospital admission,32485007,20
+Hospital admission for isolation (procedure),1505002,18
+Non-urgent orthopedic admission,183495009,17
+Periodic reevaluation and management of healthy individual (procedure),86013001,7
+Physician visit with evaluation AND/OR management service (procedure),108219001,7
+Initial Psychiatric Interview with mental status evaluation,79094001,6
+Discussion about treatment (procedure),223484005,5
+Admission to thoracic surgery department,305411003,3
+Postoperative visit (finding),183646003,2
+Outpatient Procedure (procedure),371883000,2
+Surgical procedure (procedure),387713003,2
+Hospital admission  for observation (procedure),76464004,1
+Hospital admission (procedure),32485007,1
