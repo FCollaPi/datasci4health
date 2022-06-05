@@ -21,7 +21,7 @@ Gathering 18 months of data, regarding pharmacotherapy, from electronic health r
 
 The authors used previous top-known interactions data to establish assumptions and cluster medicine and interactions by severity on a 4-point scale (None, Minor, Moderate, Major). That previous data also facilitated drawing comparisons with the gathered data.
 
-EHR also provided enough data so the authors could characterize patients on a multitude of demographic dimensions (such as gender, age, and education). That characterization confirmed hypotheses such as women being at a greater risk of DDI than men but also denied others such as education playing a role in the risk of DDI.
+EHR also provided enough data so the authors could characterize patients on a multitude of demographic dimensions (such as gender, age, and education). That characterization confirmed hypotheses such as women being at a greater risk of DDI than men and denied others such as education playing a role in the risk of DDI.
 
 Machine learning models also came into play to aid the predictability of DDI based on available data.
 
