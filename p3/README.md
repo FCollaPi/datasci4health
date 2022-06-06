@@ -137,7 +137,7 @@ Working scripts, their description, and results are:
 |3  |DB00916|DB01174|0.04|Moderate| 1.51 |    0.14     |#ee262c|Female|    1.02     | 1.18 |    8   |   1.51 | 0.85|Metronidazole|Phenobarbital |
 |4  |DB01223|DB00199|0.02|Moderate| 1.26 |    0.14     |#f498b7|Female|    1.00     |126.09|    1   |   1.26 | 0.00|Aminophylline|Erythromycin  |
 
-##### Plot
+#### Plot
 <img width="900" alt="img-graph-dist" src="https://user-images.githubusercontent.com/54454569/172216868-8c1232a7-50a5-4109-9dce-0653750a7409.png">
 
 
