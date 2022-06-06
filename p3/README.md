@@ -66,3 +66,11 @@ No other data source was necessary for conducting this experiment replication.
 
 # Results
 >TODO
+## Complex Network
+### Original
+<img width="900" alt="network-original" src="https://user-images.githubusercontent.com/54454569/172077307-c0eb593b-91bc-45e4-9928-e154f8a30666.png">
+
+### Reproduced
+<img width="900" alt="network" src="https://user-images.githubusercontent.com/54454569/172077335-a0472cb7-3feb-41fc-9d35-ab9c77243061.png">
+
+
