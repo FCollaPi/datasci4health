@@ -53,12 +53,17 @@ The CSV files used in this portion are foundable [here](https://github.com/rionb
 The authors crafted several python scripts to create the network and analyze the data. The scripts are available [here](https://github.com/rionbr/DDIBlumenau).
 
 
-## Dados usados como entrada
-Dataset | Endereço na Web | Resumo descritivo
------ | ----- | -----
-Título do Dataset | http://base1.org/ | Breve resumo (duas ou três linhas) sobre o dataset.
+## Entry Data
 
-# Método
+The authors could not make the raw data available due to the reasons above, so they pre-processed it and maintained it as described in the following table:
+
+|        Dataset       |    Address    |     Description   |
+| :------------------: | :-----------: | :---------------: | 
+|         Título       |https://github.com/rionbr/DDIBlumenau/tree/master/csv | CSVs containing data anonymized on patients,  administered drugs, and processed results  |
+
+No other data source was necessary for conducting this experiment replication.
+
+# Method
 > Método usado para a análise -- adaptações feitas, ferramentas utilizadas, abordagens de análise adotadas e respectivos algoritmos.
 > Etapas do processo reproduzido.
 
