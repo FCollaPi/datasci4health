@@ -69,6 +69,11 @@ So we focused our efforts on replicating the experiment at length to report our 
 
 
 # Method
+As stated above, replicating the study followed two procedural activities:
+- Assembling the complex network graph
+- Executing the already implemented scripts to gather results
+
+We will report both activities in detail in this section.
 
 ## Complex Network Graph
 
@@ -81,7 +86,7 @@ Since the techniques were different and the article does not cover the visualiza
 3. Configure the node styles so it can use the column `color` for coloring the nodes and the column `p_node` as the reference for dimensioning the node's size;
 4. Import the CSV file `net_edges.csv` as an edge table;
 5. Configure the edge style to use the column `color` for coloring the edges and the column `weight` for dimensioning the edge's size.
-6. Since we went through a different way of plotting the graph, we had to test the organizing algorithms. We chose the `Prefuse Force Directed OpenCL Layout` technique based on the `weight` attribute.
+6. Since we went through a different plot of the graph, we had to test the organizing algorithms. We chose the `Prefuse Force Directed OpenCL Layout` technique based on the `weight` attribute.
 
 We renamed the columns `color` to match their specific reference (`node-color` and `edge-color`) during the process, but that is not necessary because Cytoscape is smart enough to differentiate both.
 
