@@ -35,7 +35,7 @@ Since the raw data could not be made available due to legislation and de-anonymi
 
 Many of the references from the article could not be translated ipsis literis to the column names (such as variables like π or U), so understanding the data became a challenge.
 
-## Complex Network
+## Complex Network Graph
 
 Also, the authors are not straightforward on which kind of algorithm they used to organize the network, so we used our best judgment on a trial and error basis to assemble the network as they did.
 
@@ -61,16 +61,23 @@ No other data source was necessary for conducting this experiment replication.
 
 
 # Method
->TODO
 
+## Complex Network Graph
+We plotted the network graph on Cytoscape, in contrast with the authors who used in-house developed scripts.
 
-# Results
->TODO
-## Complex Network
+Since the techniques were different and the article does not cover the visualization of the graph in any shape or form, and, although very complete, Cytoscape is not very reliable (and crashed several times during our attempts), trial and error served as a beacon to reaching the results:
+
+1. Import the CSV file `net_edges.csv` as a network;
+2. Import the CSV file `net_nodes.csv` as a node table;
+3. Configure the node styles so it can use the column `color` for coloring the nodes and the column `p_node` as the reference for dimensioning the node's size;
+4. Import the CSV file `net_edges.csv` as an edge table;
+5. Configure the edge style to use the column `color` for coloring the edges and the column `weight` for dimensioning the edge's size.
+6. Since we went through a different way of plotting the graph, we had to test the organizing algorithms. We chose the `Prefuse Force Directed OpenCL Layout` technique based on the `weight` attribute.
+
+We renamed the columns `color` to match their specific reference (`node-color` and `edge-color`) during the process, but that is not necessary because Cytoscape is smart enough to differentiate both.
+
 ### Original
 <img width="900" alt="network-original" src="https://user-images.githubusercontent.com/54454569/172077307-c0eb593b-91bc-45e4-9928-e154f8a30666.png">
 
-### Reproduced
+### Replication
 <img width="900" alt="network" src="https://user-images.githubusercontent.com/54454569/172077335-a0472cb7-3feb-41fc-9d35-ab9c77243061.png">
-
-
