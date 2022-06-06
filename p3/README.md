@@ -63,6 +63,7 @@ No other data source was necessary for conducting this experiment replication.
 # Method
 
 ## Complex Network Graph
+
 We plotted the network graph on Cytoscape, in contrast with the authors who used in-house developed scripts.
 
 Since the techniques were different and the article does not cover the visualization of the graph in any shape or form, and, although very complete, Cytoscape is not very reliable (and crashed several times during our attempts), trial and error served as a beacon to reaching the results:
@@ -77,12 +78,19 @@ Since the techniques were different and the article does not cover the visualiza
 We renamed the columns `color` to match their specific reference (`node-color` and `edge-color`) during the process, but that is not necessary because Cytoscape is smart enough to differentiate both.
 
 ### Original
+
 <img width="900" alt="network-original" src="https://user-images.githubusercontent.com/54454569/172077307-c0eb593b-91bc-45e4-9928-e154f8a30666.png">
 
 ### Replication through Cytoscape
+
 <img width="900" alt="network" src="https://user-images.githubusercontent.com/54454569/172077335-a0472cb7-3feb-41fc-9d35-ab9c77243061.png">
 
 Differences are particularly latent, albeit efforts to mitigate them.
 
 We had difficulty achieving similar results using different tools and having no formula to translate the work to a different platform.
 
+### Replication through .py files
+>TODO
+
+## Scripts
+>TODO
