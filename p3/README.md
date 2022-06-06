@@ -79,5 +79,10 @@ We renamed the columns `color` to match their specific reference (`node-color` a
 ### Original
 <img width="900" alt="network-original" src="https://user-images.githubusercontent.com/54454569/172077307-c0eb593b-91bc-45e4-9928-e154f8a30666.png">
 
-### Replication
+### Replication through Cytoscape
 <img width="900" alt="network" src="https://user-images.githubusercontent.com/54454569/172077335-a0472cb7-3feb-41fc-9d35-ab9c77243061.png">
+
+Differences are particularly latent, albeit efforts to mitigate them.
+
+We had difficulty achieving similar results using different tools and having no formula to translate the work to a different platform.
+
