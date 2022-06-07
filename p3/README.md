@@ -81,7 +81,7 @@ Since the techniques were different and the article does not cover the visualiza
 3. Configure the node styles so it can use the column `color` for coloring the nodes and the column `p_node` as the reference for dimensioning the node's size;
 4. Import the CSV file `net_edges.csv` as an edge table;
 5. Configure the edge style to use the column `color` for coloring the edges and the column `weight` for dimensioning the edge's size.
-6. Since we went through a different way of plotting the graph, we had to test the organizing algorithms. We chose the `Prefuse Force Directed OpenCL Layout` technique based on the `weight` attribute.
+6. Since we went through a different plot of the graph, we had to test the organizing algorithms. We chose the `Prefuse Force Directed OpenCL Layout` technique based on the `weight` attribute.
 
 We renamed the columns `color` to match their specific reference (`node-color` and `edge-color`) during the process, but that is not necessary because Cytoscape is smart enough to differentiate both.
 
@@ -90,7 +90,7 @@ We renamed the columns `color` to match their specific reference (`node-color` a
 This is the original graph shown in the article:
 <img width="900" alt="network-original" src="https://user-images.githubusercontent.com/54454569/172077307-c0eb593b-91bc-45e4-9928-e154f8a30666.png">
 
-Each node is a dispensed drug. Nodes are colored according to their primary action. Edge weights are given by the measure $\tau$<sub>i,j</sub><sup>$\phi$</sup>, which stands for the normalized length of co-administrations of drugs i and j with known DDI, and is represented as the thickness of that edge. Node size reflects the Probability of Interaction (PI) of that drug.
+Each node is a dispensed drug. Nodes are colored according to their primary activity. Edge weights are given by the measure $\tau$<sub>i,j</sub><sup>$\phi$</sup>, which stands for the normalized length of co-administrations of drugs i and j with known DDI, and is represented as the thickness of that edge. Node size reflects the Probability of Interaction (PI) of that drug.
 
 ### Replication
 
@@ -139,14 +139,14 @@ Working scripts, their description, and results are:
     <img width="900" alt="img-graph-dist" src="https://user-images.githubusercontent.com/54454569/172216868-8c1232a7-50a5-4109-9dce-0653750a7409.png">
 
 
-- `plot_colorbar2graph.py`: Outputs only a scale used on a unplottable graph
+- `plot_colorbar2graph.py`: Outputs only a scale used on an unplottable graph
 
 <img width="300" alt="colorbar" src="https://user-images.githubusercontent.com/54454569/172240943-9e855882-e783-41d3-a2a2-8ceebc7e58ec.png">
 
 - `calculate_pca.py`: Does not output any file, only updating a table that we also cannot create due to the lack of entry data.
 
 
-- `display_ml.py`: Uses classifiers to asses the models
+- `display_ml.py`: Uses classifiers to assess the models
 
     - Classifier: `Biased Dummy`
 
@@ -200,12 +200,18 @@ Working scripts, their description, and results are:
     |  1 |   0.1194|0.5129|0.1937|0.0074 |0.5    |0.5585|
     |Mean|   0.1181|0.5075|0.1916|0.0035 |0.5    |0.5585|
 
->TODO
+    >TODO
 
-- `plot_rc_age_gender.py`:
+- `plot_rc_age_gender.py`: Plots the relationship between risk of co-administration of medication, split by gender and referencing it through age.
+
+<img width="900" alt="img-rc-age-gender" src="https://user-images.githubusercontent.com/54454569/172390880-399e1db9-5888-4ac0-9a06-c26b4fd3061f.png">
 
 
-- `plot_u_coadmin_age.py`:
+- `plot_u_coadmin_age.py`: Plots the relation between the co-administration of medication using age as a reference axis.
+
+<img width="900" alt="img-u-coadmin-age" src="https://user-images.githubusercontent.com/54454569/172391426-7cf399cf-233d-4c94-9660-05c86c86b399.png">
 
 
-- `plot_u_coadmin_age_gender.py`:
+- `plot_u_coadmin_age_gender.py`: Plots the relation between the co-administration of medication using age as a reference axis and splitting the curves by gender. This three-dimensional analysis allows a more granular risk analysis within Blumenau's population.
+
+<img width="900" alt="img-u-coadmin-age-gender" src="https://user-images.githubusercontent.com/54454569/172391489-825335d2-1a0c-4fb3-90d6-4ef94e91ad3d.png">
