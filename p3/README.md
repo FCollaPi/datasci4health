@@ -69,11 +69,6 @@ So we focused our efforts on replicating the experiment at length to report our 
 
 
 # Method
-As stated above, replicating the study followed two procedural activities:
-- Assembling the complex network graph
-- Executing the already implemented scripts to gather results
-
-We will report both activities in detail in this section.
 
 ## Complex Network Graph
 
@@ -86,7 +81,7 @@ Since the techniques were different and the article does not cover the visualiza
 3. Configure the node styles so it can use the column `color` for coloring the nodes and the column `p_node` as the reference for dimensioning the node's size;
 4. Import the CSV file `net_edges.csv` as an edge table;
 5. Configure the edge style to use the column `color` for coloring the edges and the column `weight` for dimensioning the edge's size.
-6. Since we went through a different plot of the graph, we had to test the organizing algorithms. We chose the `Prefuse Force Directed OpenCL Layout` technique based on the `weight` attribute.
+6. Since we went through a different way of plotting the graph, we had to test the organizing algorithms. We chose the `Prefuse Force Directed OpenCL Layout` technique based on the `weight` attribute.
 
 We renamed the columns `color` to match their specific reference (`node-color` and `edge-color`) during the process, but that is not necessary because Cytoscape is smart enough to differentiate both.
 
@@ -94,6 +89,8 @@ We renamed the columns `color` to match their specific reference (`node-color` a
 
 This is the original graph shown in the article:
 <img width="900" alt="network-original" src="https://user-images.githubusercontent.com/54454569/172077307-c0eb593b-91bc-45e4-9928-e154f8a30666.png">
+
+Each node is a dispensed drug. Nodes are colored according to their primary action. Edge weights are given by the measure $\tau$<sub>i,j</sub><sup>$\phi$</sup>, which stands for the normalized length of co-administrations of drugs i and j with known DDI, and is represented as the thickness of that edge. Node size reflects the Probability of Interaction (PI) of that drug.
 
 ### Replication
 
@@ -112,38 +109,103 @@ We decided to update all scripts to the 3.x notation and check for progress. Non
 
 Of the 18 available python scripts, eleven are still executable, and seven are not, as seen in the downward chart:
 
-<img width="500" alt="chart" src="https://user-images.githubusercontent.com/54454569/172206740-6aee8cbc-de81-42f3-974d-414b8e6746d4.png">
+<img width="900" alt="chart" src="https://user-images.githubusercontent.com/54454569/172206740-6aee8cbc-de81-42f3-974d-414b8e6746d4.png">
 
 Working scripts, their description, and results are:
 - `plot_network_dist.py`: Information on nodes and edges (limited by the first five tuples) and the histogram plot relating the number of drugs administered to the recurrency of know interaction (that translates to the property `value` in the node table and `weight` on the edge table).
 
-#### Nodes
+    - #### Nodes
 
-|   |   dbi |p_node|hormone|len_i |degree| color |degree-strength|      label  |node_bet_cent|module-louvain|module-infomap|         class       |rank_degree|
-|:-:| :----:|:----:|:-----:|:---: |:----:|:-----:|:-------------:|:-----------:|:-----------:|:------------:|:------------:|:-------------------:|:---------:|
-| 0 |DB00252|0.20  |False  |42794 |   24 |#976fb0|       6.51    |Phenytoin    |      0.30   |        2     |      1       |CNS agents           |       1   |
-| 1 |DB00564|0.18  |False  |87950 |   18 |#976fb0|       4.84    |Carbamazepine|      0.20   |        0     |      2       |CNS agents           |       2   |
-|2  |DB01174|0.05  |False  |13638 |   15 |#976fb0|       2.17    |Phenobarbital|      0.28   |        2     |      1       |CNS agents           |       3   |
-|3  |DB00571|0.10  |False  |109099|   14 |#ee262c|       4.81    |Propranolol  |      0.06   |        4     |      0       |Cardiovascular agents|       4   |
-|4  |DB00682|0.13  |False  |57959 |   14 |#f498b7|       3.31    |Warfarin     |      0.17   |        1     |      3       |Coagulation modifiers|       4   |
+    |   |   dbi |p_node|hormone|len_i |degree| color |degree-strength|      label  |node_bet_cent|module-louvain|module-infomap|         class       |rank_degree|
+    |:-:| :----:|:----:|:-----:|:---: |:----:|:-----:|:-------------:|:-----------:|:-----------:|:------------:|:------------:|:-------------------:|:---------:|
+    | 0 |DB00252|0.20  |False  |42794 |   24 |#976fb0|       6.51    |Phenytoin    |      0.30   |        2     |      1       |CNS agents           |       1   |
+    | 1 |DB00564|0.18  |False  |87950 |   18 |#976fb0|       4.84    |Carbamazepine|      0.20   |        0     |      2       |CNS agents           |       2   |
+    |2  |DB01174|0.05  |False  |13638 |   15 |#976fb0|       2.17    |Phenobarbital|      0.28   |        2     |      1       |CNS agents           |       3   |
+    |3  |DB00571|0.10  |False  |109099|   14 |#ee262c|       4.81    |Propranolol  |      0.06   |        4     |      0       |Cardiovascular agents|       4   |
+    |4  |DB00682|0.13  |False  |57959 |   14 |#f498b7|       3.31    |Warfarin     |      0.17   |        1     |      3       |Coagulation modifiers|       4   |
 
-#### Edges
+    - #### Edges
 
-|   |   dbi |  dbj  | tau|severity|weight|edge_bet_cent|  color|gender|patients_norm|RRI^F |patients|tau_norm|RRI^M|   label_i   |    label_j   |
-|:-:| :----:|:-----:|:--:|:------:|:----:|:----------: |:-----:|:----:| :---------: |:---: |:------:| :----: |:---:|:-----------:|:------------:|
-| 0 |DB01174|DB00741|0.01|Moderate| 1.13 |    0.20     |#976fb0|Female|    1.01     | 1.42 |    3   |   1.13 | 0.71|Phenobarbital|Hydrocortisone|
-| 1 |DB00252|DB00741|0.02|Moderate| 1.26 |    0.19     |#976fb0| Male |    1.00     | 0.71 |    2   |   1.26 | 1.41|Phenytoin    |Hydrocortisone|
-|2  |DB00682|DB00537|0.07|Major   | 1.90 |    0.14     |#976fb0|Female|    1.06     | 1.02 |   22   |   1.90 | 0.98|Warfarin     |Ciprofloxacin |
-|3  |DB00916|DB01174|0.04|Moderate| 1.51 |    0.14     |#ee262c|Female|    1.02     | 1.18 |    8   |   1.51 | 0.85|Metronidazole|Phenobarbital |
-|4  |DB01223|DB00199|0.02|Moderate| 1.26 |    0.14     |#f498b7|Female|    1.00     |126.09|    1   |   1.26 | 0.00|Aminophylline|Erythromycin  |
+    |   |   dbi |  dbj  | tau|severity|weight|edge_bet_cent|  color|gender|patients_norm|RRI^F |patients|tau_norm|RRI^M|   label_i   |    label_j   |
+    |:-:| :----:|:-----:|:--:|:------:|:----:|:----------: |:-----:|:----:| :---------: |:---: |:------:| :----: |:---:|:-----------:|:------------:|
+    | 0 |DB01174|DB00741|0.01|Moderate| 1.13 |    0.20     |#976fb0|Female|    1.01     | 1.42 |    3   |   1.13 | 0.71|Phenobarbital|Hydrocortisone|
+    | 1 |DB00252|DB00741|0.02|Moderate| 1.26 |    0.19     |#976fb0| Male |    1.00     | 0.71 |    2   |   1.26 | 1.41|Phenytoin    |Hydrocortisone|
+    |2  |DB00682|DB00537|0.07|Major   | 1.90 |    0.14     |#976fb0|Female|    1.06     | 1.02 |   22   |   1.90 | 0.98|Warfarin     |Ciprofloxacin |
+    |3  |DB00916|DB01174|0.04|Moderate| 1.51 |    0.14     |#ee262c|Female|    1.02     | 1.18 |    8   |   1.51 | 0.85|Metronidazole|Phenobarbital |
+    |4  |DB01223|DB00199|0.02|Moderate| 1.26 |    0.14     |#f498b7|Female|    1.00     |126.09|    1   |   1.26 | 0.00|Aminophylline|Erythromycin  |
 
-#### Plot
-<img width="900" alt="img-graph-dist" src="https://user-images.githubusercontent.com/54454569/172216868-8c1232a7-50a5-4109-9dce-0653750a7409.png">
+    - #### Plot
+
+    <img width="900" alt="img-graph-dist" src="https://user-images.githubusercontent.com/54454569/172216868-8c1232a7-50a5-4109-9dce-0653750a7409.png">
 
 
-- `plot_colorbar2graph.py`:
-- `calculate_pca.py`:
-- `display_ml.py`:
+- `plot_colorbar2graph.py`: Outputs only a scale used on a unplottable graph
+
+<img width="300" alt="colorbar" src="https://user-images.githubusercontent.com/54454569/172240943-9e855882-e783-41d3-a2a2-8ceebc7e58ec.png">
+
+- `calculate_pca.py`: Does not output any file, only updating a table that we also cannot create due to the lack of entry data.
+
+
+- `display_ml.py`: Uses classifiers to asses the models
+
+    - Classifier: `Biased Dummy`
+
+    |fold|precision|recall|  f1  |  mcc  |roc_auc|pr_auc|
+    |:--:|:-------:|:----:|:----:|:-----:|:-----:|:----:|
+    |  2 |   0.1112|0.1118|0.1115|-0.0066|0.4967 |0.1635|
+    |  4 |   0.1094|0.1100|0.1097|-0.0086|0.4957 |0.1618|
+    |  1 |   0.1240|0.1247|0.1243| 0.0080|0.5040 |0.1755|
+    |  3 |   0.1143|0.1149|0.1146|-0.0031|0.4984 |0.1664|
+    |Mean|   0.1147|0.1153|0.1150|-0.0026|0.4987 |0.1668|
+
+    - Classifier: `Linear SVM`
+
+    |fold|precision|recall|  f1  |  mcc |roc_auc|pr_auc|
+    |:--:|:-------:|:----:|:----:|:----:|:-----:|:----:|
+    |  4 |   0.8185|0.6439|0.7208|0.6949|0.9690 |0.8310|
+    |  3 |   0.8127|0.6504|0.7226|0.6957|0.9697 |0.8315|
+    |  2 |   0.8241|0.6494|0.7264|0.7011|0.9702 |0.8365|
+    |  1 |   0.8196|0.6309|0.7130|0.6877|0.9676 |0.8269|
+    |Mean|   0.8187|0.6437|0.7207|0.6949|0.9691 |0.8315|
+
+    - Classifier: `Logistic Regression`
+
+    |fold|precision|recall|  f1  |  mcc |roc_auc|pr_auc|
+    |:--:|:-------:|:----:|:----:|:----:|:-----:|:----:|
+    |  2 |   0.8096|0.6669|0.7314|0.7037|0.9700 |0.8337|
+    |  1 |   0.8085|0.6535|0.7228|0.6953|0.9675 |0.8249|
+    |  4 |   0.8092|0.6612|0.7277|0.7002|0.9691 |0.8304|
+    |  3 |   0.7991|0.6662|0.7266|0.6977|0.9697 |0.8299|
+    |Mean|   0.8066|0.6619|0.7271|0.6992|0.9691 |0.8297|
+    
+
+    - Classifier: `Rough Dummy`
+
+
+    |fold|precision|recall|  f1  |  mcc |roc_auc|pr_auc|
+    |:--:|:-------:|:----:|:----:|:----:|:-----:|:----:|
+    |  4 |   0.2056|0.8856|0.3337|0.2779|0.7161 |0.5523|
+    |  3 |   0.2043|0.8843|0.3320|0.2752|0.7140 |0.5511|
+    |  2 |   0.2048|0.8797|0.3323|0.2747|0.7136 |0.5493|
+    |  1 |   0.2029|0.8841|0.3300|0.2725|0.7119 |0.5503|
+    |Mean|   0.2044|0.8834|0.3320|0.2751|0.7139 |0.5507|
+
+    - Classifier: `Uniform Dummy`
+
+    |fold|precision|recall|  f1  |  mcc  |roc_auc|pr_auc|
+    |:--:|:-------:|:----:|:----:|:-----:|:-----:|:----:|
+    |  4 |   0.1184|0.5086|0.1920|0.0043 |0.5    |0.5585|
+    |  3 |   0.1152|0.4951|0.1869|-0.0055|0.5    |0.5585|
+    |  2 |   0.1195|0.5134|0.1939|0.0078 |0.5    |0.5585|
+    |  1 |   0.1194|0.5129|0.1937|0.0074 |0.5    |0.5585|
+    |Mean|   0.1181|0.5075|0.1916|0.0035 |0.5    |0.5585|
+
+>TODO
+
 - `plot_rc_age_gender.py`:
+
+
 - `plot_u_coadmin_age.py`:
+
+
 - `plot_u_coadmin_age_gender.py`:
