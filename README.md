@@ -5,5 +5,5 @@ Repository for the course Data Science for Health at IC/FEEC UNICAMP https://ds4
 Maintainers:
 |        Name       |       RA      |           Especialization         |
 | :---------------: | ------------- | --------------------------------- | 
-| Felipe Pinheiro   |     155298    | Computer Science Masters Student  |
-| Guilherme Jardim  |     203834    | Computer Science Masters Student  |
+| Felipe Pinheiro   |     155298    | Computer Science Master's Student  |
+| Guilherme Jardim  |     203834    | Computer Science Master's Student  |
