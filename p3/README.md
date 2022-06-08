@@ -96,6 +96,7 @@ We also decided to explore the the scripts made available in that same repositor
 ### Original
 
 For comparison, this is the original graph shown in the article:
+
 <img width="900" alt="network-original" src="https://user-images.githubusercontent.com/54454569/172077307-c0eb593b-91bc-45e4-9928-e154f8a30666.png">
 
 Each node is a dispensed drug. Nodes are colored according to their primary activity. Edge weights are given by the measure $\tau$<sub>i,j</sub><sup>$\phi$</sup>, which stands for the normalized length of co-administration of drugs i and j with known DDI, and is represented as the thickness of that edge. Node size reflects the Probability of Interaction (PI) of that drug. Edges are colored using the Relative (to gender) Risk of Interaction (RRI). That colormap is calculated proportionally (a stronger color means a higher value) and stratified by gender (red for female and blue for male), meaning that the specified gender have a higher risk of being dispensed a pair of drugs that have known interaction than the opposite gender.
@@ -103,11 +104,14 @@ Each node is a dispensed drug. Nodes are colored according to their primary acti
 ### Replication
 
 The first produced graph is the following:
+
 <img width="900" alt="network" src="https://user-images.githubusercontent.com/54454569/172077335-a0472cb7-3feb-41fc-9d35-ab9c77243061.png">
+
 It can be seen that only red and gray edges are displayed.
 
 
 This is the graph we could sought to reproduce after a color fix and minor layout improvements.
+
 <img width="900" alt="network" src="https://github.com/FCollaPi/datasci4health/blob/main/p3/assets/2nd-network.png?raw=true">
 
 We then could achieve network similar to that displayed on the original article. It can be seen that most edges are red, meaning that most of the co-admnistered drugs have a higher risk of interaction among those prescribed to women than those prescribed to men.
