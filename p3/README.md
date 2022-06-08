@@ -158,7 +158,7 @@ Working scripts, their description, and results are:
 
 - `plot_colorbar2graph.py`: Outputs only a scale used on an unplottable graph
 
-<img width="300" alt="colorbar" src="https://user-images.githubusercontent.com/54454569/172240943-9e855882-e783-41d3-a2a2-8ceebc7e58ec.png">
+    <img width="300" alt="colorbar" src="https://user-images.githubusercontent.com/54454569/172240943-9e855882-e783-41d3-a2a2-8ceebc7e58ec.png">
 
 - `calculate_pca.py`: Does not output any file, only updating a table that we also cannot create due to the lack of entry data.
 
