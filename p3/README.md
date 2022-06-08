@@ -85,7 +85,7 @@ Since the techniques were different and the article does not cover the visualiza
 
 We renamed the columns `color` to match their specific reference (`node-color` and `edge-color`) during the process, but that is not necessary because Cytoscape is smart enough to differentiate both.
 
-After that first trial, a new column `our-color` had to be added to the edges table since the original one had only shades of gray and red, meaning that the it could not reflect the visualization provided on the original paper. To correct that, the colors were recalculated using the Relative Risk of Interaction (RRI) columns of the aforementioned table, with the RGB value of 70 corresponding to the minimun RRI value and 255 corresponding to the maximum RRI value.
+After that first trial, a new column `our-color` had to be added to the edges table since the original one had only shades of gray and red, meaning that the it could not reflect the visualization provided on the original paper. To correct that, the colors were recalculated using the Relative Risk of Interaction (RRI) columns of the aforementioned table, with the RGB value of 70 corresponding to the minimun RRI value and 255 corresponding to the maximum RRI value. We used [this](https://github.com/FCollaPi/datasci4health/blob/main/p3/notebooks/1.0-explore-nodes-and-edges.ipynb) notebook for that purpose.
 
 We also decided to explore the the scripts made available in that same repository.
 
@@ -111,6 +111,8 @@ This is the graph we could sought to reproduce after a color fix and minor layou
 <img width="900" alt="network" src="https://github.com/FCollaPi/datasci4health/blob/main/p3/assets/2nd-network.png?raw=true">
 
 We then could achieve network similar to that displayed on the original article. It can be seen that most edges are red, meaning that most of the co-admnistered drugs have a higher risk of interaction among those prescribed to women than those prescribed to men.
+
+Also, the node sizes and colors appear to follow those shown in the original representation.
 
 ## Scripts
 
