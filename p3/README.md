@@ -129,7 +129,7 @@ Of the 18 available python scripts, eleven are still executable, and seven are n
 <img width="900" alt="chart" src="https://user-images.githubusercontent.com/54454569/172206740-6aee8cbc-de81-42f3-974d-414b8e6746d4.png">
 
 Working scripts, their description, and results are:
-- `plot_network_dist.py`: Information on nodes and edges (limited by the first five tuples) and the histogram plot relating the number of drugs administered to the recurrency of know interaction (that translates to the property `value` in the node table and `weight` on the edge table).
+- `plot_network_dist.py`: Information on nodes and edges (limited to the first five tuples) and the histogram plot relating the number of drugs administered to the recurrency of know interaction (that translates to the property `value` in the node table and `weight` on the edge table).
 
     - #### Nodes
 
