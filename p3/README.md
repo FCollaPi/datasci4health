@@ -153,7 +153,7 @@ Working scripts, their description, and results are:
 
     - #### Plot
 
-    <img width="900" alt="img-graph-dist" src="https://user-images.githubusercontent.com/54454569/172216868-8c1232a7-50a5-4109-9dce-0653750a7409.png">
+        <img width="900" alt="img-graph-dist" src="https://user-images.githubusercontent.com/54454569/172216868-8c1232a7-50a5-4109-9dce-0653750a7409.png">
 
 
 - `plot_colorbar2graph.py`: Outputs only a scale used on an unplottable graph
@@ -167,71 +167,70 @@ Working scripts, their description, and results are:
 
     - Classifier: `Biased Dummy`
 
-    |fold|precision|recall|  f1  |  mcc  |roc_auc|pr_auc|
-    |:--:|:-------:|:----:|:----:|:-----:|:-----:|:----:|
-    |  2 |   0.1112|0.1118|0.1115|-0.0066|0.4967 |0.1635|
-    |  4 |   0.1094|0.1100|0.1097|-0.0086|0.4957 |0.1618|
-    |  1 |   0.1240|0.1247|0.1243| 0.0080|0.5040 |0.1755|
-    |  3 |   0.1143|0.1149|0.1146|-0.0031|0.4984 |0.1664|
-    |Mean|   0.1147|0.1153|0.1150|-0.0026|0.4987 |0.1668|
+        |fold|precision|recall|  f1  |  mcc  |roc_auc|pr_auc|
+        |:--:|:-------:|:----:|:----:|:-----:|:-----:|:----:|
+        |  2 |   0.1112|0.1118|0.1115|-0.0066|0.4967 |0.1635|
+        |  4 |   0.1094|0.1100|0.1097|-0.0086|0.4957 |0.1618|
+        |  1 |   0.1240|0.1247|0.1243| 0.0080|0.5040 |0.1755|
+        |  3 |   0.1143|0.1149|0.1146|-0.0031|0.4984 |0.1664|
+        |Mean|   0.1147|0.1153|0.1150|-0.0026|0.4987 |0.1668|
 
     - Classifier: `Linear SVM`
 
-    |fold|precision|recall|  f1  |  mcc |roc_auc|pr_auc|
-    |:--:|:-------:|:----:|:----:|:----:|:-----:|:----:|
-    |  4 |   0.8185|0.6439|0.7208|0.6949|0.9690 |0.8310|
-    |  3 |   0.8127|0.6504|0.7226|0.6957|0.9697 |0.8315|
-    |  2 |   0.8241|0.6494|0.7264|0.7011|0.9702 |0.8365|
-    |  1 |   0.8196|0.6309|0.7130|0.6877|0.9676 |0.8269|
-    |Mean|   0.8187|0.6437|0.7207|0.6949|0.9691 |0.8315|
+        |fold|precision|recall|  f1  |  mcc |roc_auc|pr_auc|
+        |:--:|:-------:|:----:|:----:|:----:|:-----:|:----:|
+        |  4 |   0.8185|0.6439|0.7208|0.6949|0.9690 |0.8310|
+        |  3 |   0.8127|0.6504|0.7226|0.6957|0.9697 |0.8315|
+        |  2 |   0.8241|0.6494|0.7264|0.7011|0.9702 |0.8365|
+        |  1 |   0.8196|0.6309|0.7130|0.6877|0.9676 |0.8269|
+        |Mean|   0.8187|0.6437|0.7207|0.6949|0.9691 |0.8315|
 
     - Classifier: `Logistic Regression`
 
-    |fold|precision|recall|  f1  |  mcc |roc_auc|pr_auc|
-    |:--:|:-------:|:----:|:----:|:----:|:-----:|:----:|
-    |  2 |   0.8096|0.6669|0.7314|0.7037|0.9700 |0.8337|
-    |  1 |   0.8085|0.6535|0.7228|0.6953|0.9675 |0.8249|
-    |  4 |   0.8092|0.6612|0.7277|0.7002|0.9691 |0.8304|
-    |  3 |   0.7991|0.6662|0.7266|0.6977|0.9697 |0.8299|
-    |Mean|   0.8066|0.6619|0.7271|0.6992|0.9691 |0.8297|
+        |fold|precision|recall|  f1  |  mcc |roc_auc|pr_auc|
+        |:--:|:-------:|:----:|:----:|:----:|:-----:|:----:|
+        |  2 |   0.8096|0.6669|0.7314|0.7037|0.9700 |0.8337|
+        |  1 |   0.8085|0.6535|0.7228|0.6953|0.9675 |0.8249|
+        |  4 |   0.8092|0.6612|0.7277|0.7002|0.9691 |0.8304|
+        |  3 |   0.7991|0.6662|0.7266|0.6977|0.9697 |0.8299|
+        |Mean|   0.8066|0.6619|0.7271|0.6992|0.9691 |0.8297|
     
 
     - Classifier: `Rough Dummy`
 
-
-    |fold|precision|recall|  f1  |  mcc |roc_auc|pr_auc|
-    |:--:|:-------:|:----:|:----:|:----:|:-----:|:----:|
-    |  4 |   0.2056|0.8856|0.3337|0.2779|0.7161 |0.5523|
-    |  3 |   0.2043|0.8843|0.3320|0.2752|0.7140 |0.5511|
-    |  2 |   0.2048|0.8797|0.3323|0.2747|0.7136 |0.5493|
-    |  1 |   0.2029|0.8841|0.3300|0.2725|0.7119 |0.5503|
-    |Mean|   0.2044|0.8834|0.3320|0.2751|0.7139 |0.5507|
+        |fold|precision|recall|  f1  |  mcc |roc_auc|pr_auc|
+        |:--:|:-------:|:----:|:----:|:----:|:-----:|:----:|
+        |  4 |   0.2056|0.8856|0.3337|0.2779|0.7161 |0.5523|
+        |  3 |   0.2043|0.8843|0.3320|0.2752|0.7140 |0.5511|
+        |  2 |   0.2048|0.8797|0.3323|0.2747|0.7136 |0.5493|
+        |  1 |   0.2029|0.8841|0.3300|0.2725|0.7119 |0.5503|
+        |Mean|   0.2044|0.8834|0.3320|0.2751|0.7139 |0.5507|
 
     - Classifier: `Uniform Dummy`
 
-    |fold|precision|recall|  f1  |  mcc  |roc_auc|pr_auc|
-    |:--:|:-------:|:----:|:----:|:-----:|:-----:|:----:|
-    |  4 |   0.1184|0.5086|0.1920|0.0043 |0.5    |0.5585|
-    |  3 |   0.1152|0.4951|0.1869|-0.0055|0.5    |0.5585|
-    |  2 |   0.1195|0.5134|0.1939|0.0078 |0.5    |0.5585|
-    |  1 |   0.1194|0.5129|0.1937|0.0074 |0.5    |0.5585|
-    |Mean|   0.1181|0.5075|0.1916|0.0035 |0.5    |0.5585|
+        |fold|precision|recall|  f1  |  mcc  |roc_auc|pr_auc|
+        |:--:|:-------:|:----:|:----:|:-----:|:-----:|:----:|
+        |  4 |   0.1184|0.5086|0.1920|0.0043 |0.5    |0.5585|
+        |  3 |   0.1152|0.4951|0.1869|-0.0055|0.5    |0.5585|
+        |  2 |   0.1195|0.5134|0.1939|0.0078 |0.5    |0.5585|
+        |  1 |   0.1194|0.5129|0.1937|0.0074 |0.5    |0.5585|
+        |Mean|   0.1181|0.5075|0.1916|0.0035 |0.5    |0.5585|
 
     >TODO
 
 - `plot_rc_age_gender.py`: Plots the relationship between risk of co-administration of medication, split by gender and referencing it through age.
 
-<img width="900" alt="img-rc-age-gender" src="https://user-images.githubusercontent.com/54454569/172390880-399e1db9-5888-4ac0-9a06-c26b4fd3061f.png">
+    <img width="900" alt="img-rc-age-gender" src="https://user-images.githubusercontent.com/54454569/172390880-399e1db9-5888-4ac0-9a06-c26b4fd3061f.png">
 
 
 - `plot_u_coadmin_age.py`: Plots the relation between the co-administration of medication using age as a reference axis.
 
-<img width="900" alt="img-u-coadmin-age" src="https://user-images.githubusercontent.com/54454569/172391426-7cf399cf-233d-4c94-9660-05c86c86b399.png">
+    <img width="900" alt="img-u-coadmin-age" src="https://user-images.githubusercontent.com/54454569/172391426-7cf399cf-233d-4c94-9660-05c86c86b399.png">
 
 
 - `plot_u_coadmin_age_gender.py`: Plots the relation between the co-administration of medication using age as a reference axis and splitting the curves by gender. This three-dimensional analysis allows a more granular risk analysis within Blumenau's population.
 
-<img width="900" alt="img-u-coadmin-age-gender" src="https://user-images.githubusercontent.com/54454569/172391489-825335d2-1a0c-4fb3-90d6-4ef94e91ad3d.png">
+    <img width="900" alt="img-u-coadmin-age-gender" src="https://user-images.githubusercontent.com/54454569/172391489-825335d2-1a0c-4fb3-90d6-4ef94e91ad3d.png">
 
 # Conclusion
 
