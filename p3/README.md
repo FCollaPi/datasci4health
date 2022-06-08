@@ -11,9 +11,11 @@ We developed this project in the context of the graduate subject [Data Science a
 | Felipe Pinheiro   |     155298    | Computer Science  |
 | Guilherme Jardim  |     203834    | Computer Science  |
 
+In this project we aim to reproduce an article that uses complex networks for health research.
+
 # Citation
 
-The [suggested database](https://icon.colorado.edu/#!/networks) led us to find the chosen article, which was "City-wide electronic health records reveal gender and age biases in administration of known drug-drug interactions and can be found [here](https://www.nature.com/articles/s41746-019-0141-x).
+The [database](https://icon.colorado.edu/#!/networks) suggested by the subject professors led us to find the chosen article, which was "City-wide electronic health records reveal gender and age biases in administration of known drug-drug interactions" and can be found [here](https://www.nature.com/articles/s41746-019-0141-x).
 
 Since this article has a perennial nature and an organic adherence to Brazilian reality, selecting it was somewhat easy. Not only that but the size and complexity of their data processing sounded reasonable within our time constraints.
 
@@ -70,8 +72,6 @@ So we focused our efforts on replicating the experiment at length to report our 
 
 # Method
 
-## Complex Network Graph
-
 We plotted the network graph on Cytoscape, in contrast with the authors who used in-house developed scripts.
 
 Since the techniques were different and the article does not cover the visualization of the graph in any shape or form, and, although very complete, Cytoscape is not very reliable (and crashed several times during our attempts), trial and error served as a beacon to reaching the results:
@@ -85,21 +85,32 @@ Since the techniques were different and the article does not cover the visualiza
 
 We renamed the columns `color` to match their specific reference (`node-color` and `edge-color`) during the process, but that is not necessary because Cytoscape is smart enough to differentiate both.
 
+After that first trial, a new column `our-color` had to be added to the edges table since the original one had only shades of gray and red, meaning that the it could not reflect the visualization provided on the original paper. To correct that, the colors were recalculated using the Relative Risk of Interaction (RRI) columns of the aforementioned table, with the RGB value of 70 corresponding to the minimun RRI value and 255 corresponding to the maximum RRI value.
+
+We also decided to explore the the scripts made available in that same repository.
+
+# Results
+
+## Complex Network Graph
+
 ### Original
 
-This is the original graph shown in the article:
+For comparison, this is the original graph shown in the article:
 <img width="900" alt="network-original" src="https://user-images.githubusercontent.com/54454569/172077307-c0eb593b-91bc-45e4-9928-e154f8a30666.png">
 
-Each node is a dispensed drug. Nodes are colored according to their primary activity. Edge weights are given by the measure $\tau$<sub>i,j</sub><sup>$\phi$</sup>, which stands for the normalized length of co-administrations of drugs i and j with known DDI, and is represented as the thickness of that edge. Node size reflects the Probability of Interaction (PI) of that drug.
+Each node is a dispensed drug. Nodes are colored according to their primary activity. Edge weights are given by the measure $\tau$<sub>i,j</sub><sup>$\phi$</sup>, which stands for the normalized length of co-administration of drugs i and j with known DDI, and is represented as the thickness of that edge. Node size reflects the Probability of Interaction (PI) of that drug. Edges are colored using the Relative (to gender) Risk of Interaction (RRI). That colormap is calculated proportionally (a stronger color means a higher value) and stratified by gender (red for female and blue for male), meaning that the specified gender have a higher risk of being dispensed a pair of drugs that have known interaction than the opposite gender.
 
 ### Replication
 
-This is the graph we could sought to reproduce:
+The first produced graph is the following:
 <img width="900" alt="network" src="https://user-images.githubusercontent.com/54454569/172077335-a0472cb7-3feb-41fc-9d35-ab9c77243061.png">
+It can be seen that only red and gray edges are displayed.
 
-Differences are particularly latent, albeit efforts to mitigate them.
 
-We had difficulty achieving similar results using different tools and having no formula to translate the work to a different platform.
+This is the graph we could sought to reproduce after a color fix and minor layout improvements.
+<img width="900" alt="network" src="https://github.com/FCollaPi/datasci4health/blob/main/p3/assets/2nd-network.png?raw=true">
+
+We then could achieve network similar to that displayed on the original article. It can be seen that most edges are red, meaning that most of the co-admnistered drugs have a higher risk of interaction among those prescribed to women than those prescribed to men.
 
 ## Scripts
 
@@ -215,3 +226,7 @@ Working scripts, their description, and results are:
 - `plot_u_coadmin_age_gender.py`: Plots the relation between the co-administration of medication using age as a reference axis and splitting the curves by gender. This three-dimensional analysis allows a more granular risk analysis within Blumenau's population.
 
 <img width="900" alt="img-u-coadmin-age-gender" src="https://user-images.githubusercontent.com/54454569/172391489-825335d2-1a0c-4fb3-90d6-4ef94e91ad3d.png">
+
+# Conclusion
+
+Even though partially, we were able to reproduce the original article results.
