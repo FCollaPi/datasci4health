@@ -17,13 +17,13 @@ We developed this project in the context of the graduate subject [Data Science a
 | Felipe Pinheiro   |     155298    | Computer Science  |
 | Guilherme Jardim  |     203834    | Computer Science  |
 
-# Introdução
+# Intro
 > Apresentação de forma resumida do problema (contexto) e a pergunta que se quer responder.
 
-## Ferramentas
+## Tools
 > Listagem das ferramentas utilizadas (na forma de itens).
 
-## Preparo e uso dos dados
+## Data Prepare & Usage
 
 > Descreva o pipeline de pré-processamento dos dados:
 * normalização (se houver)
@@ -44,22 +44,22 @@ We developed this project in the context of the graduate subject [Data Science a
 > Justificar as escolhas.
 > Esta parte do relatório pode ser copiada da Atividade 11, caso o grupo opte por usar o SVM já treinado.
 
-# Resultados Obtidos e Discussão
+# Obtained Results & Discussion
 > Esta seção deve apresentar o resultado de predição das lesões de LES usando o classificador treinado. Também deve tentar explicar quais os atributos relevantes usados na classificação obtida
 > * apresente os resultados de forma quantitativa e qualitativa
 > * tenha em mente que quem irá ler o relatório é uma equipe multidisciplinar. Descreva questões técnicas, mas também a intuição por trás delas.
 
-# Conclusão
+# Final Remarks
 > Destacar as principais conclusões obtidas no desenvolvimento do projeto.
 >
 > Destacar os principais desafios enfrentados.
 >
-> Principais lições aprendidas.
+> Lessons Learned
 >
-> Trabalhos Futuros:
+> Future Works
 > * o que poderia ser melhorado se houvesse mais tempo?
 
-# Referências Bibliográficas
+# References
 > Lista de artigos, links e referências bibliográficas (se houver).
 >
 > Fiquem à vontade para escolher o padrão de referenciamento preferido pelo grupo.
