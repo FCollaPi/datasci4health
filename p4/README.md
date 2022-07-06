@@ -5,7 +5,6 @@ Segue abaixo o modelo de como deve ser documentada a entrega.
 
 Se o relatório for feito em um notebook, o modelo a seguir pode ser colocado dentro do notebook diretamente. Nesse caso, coloque no markdown do projeto (fora do notebook) uma cópia dos dados até a seção de `Apresentação` e um link para o notebook com o relatório.
 
-# Classificando lesões de substância branca no Lúpus
 # Classifying white matter lesions on lupus
 
 # Intro
@@ -18,7 +17,7 @@ We developed this project in the context of the graduate subject [Data Science a
 | Guilherme Jardim  |     203834    | Computer Science  |
 
 # Intro
-> Apresentação de forma resumida do problema (contexto) e a pergunta que se quer responder.
+This project attempts to classify white matter lesions, whether they are ischemic or demyelinating, through the usage of trained AI models.
 
 ## Tools
 > Listagem das ferramentas utilizadas (na forma de itens).
@@ -33,7 +32,7 @@ We developed this project in the context of the graduate subject [Data Science a
 * seleção de atributos (se houver)
 
 
-# Metodologia
+# Metodology
 > Descreva o classificador escolhido e o pipeline de treinamento:
 * split dos dados de treinamento
 * escolha de parâmetros do classificador
