@@ -7,8 +7,6 @@ Se o relatório for feito em um notebook, o modelo a seguir pode ser colocado de
 
 # Classifying white matter lesions on lupus
 
-# Intro
-
 We developed this project in the context of the graduate subject [Data Science and Visualization for Health](https://ds4h.org/) for the 2022.1 term at Unicamp.
 
 |        Name       |       RA      |  Especialization  |
@@ -19,15 +17,13 @@ We developed this project in the context of the graduate subject [Data Science a
 # Intro
 Lupus is an autoimmune disease in which the immune system attacks its own tissues, causing general inflammation and damage across all affected organs. Systemic Lupus Erythematosus (SLE) is the most common type of lupus, and its seriousness ranges from mild to life-threatening.
 
-The causes of SLE are yet unknown but believed to be linked to genetic, hormonal, and environmental factors.
-
-A team of doctors specialized in the care of SLE patients should provide preventive care and education since this disease has no cure.
+A team of doctors specialized in the care of SLE patients should provide preventive care and education since this disease has no cure. The causes of SLE are yet unknown but believed to be linked to genetic, hormonal, and environmental factors.
 
 This project attempts to classify white matter lesions, whether they are ischemic or demyelinating, through the usage of trained AI models.
 
 ## Tools
-> Jupyter Notebooks
-> 
+- Jupyter Notebooks
+- Google Colab
 
 ## Data Prepare & Usage
 
@@ -66,4 +62,4 @@ This project attempts to classify white matter lesions, whether they are ischemi
 > * o que poderia ser melhorado se houvesse mais tempo?
 
 # References
-> https://www.cdc.gov/lupus/facts/detailed.html
+- https://www.cdc.gov/lupus/facts/detailed.html
