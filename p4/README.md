@@ -17,10 +17,17 @@ We developed this project in the context of the graduate subject [Data Science a
 | Guilherme Jardim  |     203834    | Computer Science  |
 
 # Intro
+Lupus is an autoimmune disease in which the immune system attacks its own tissues, causing general inflammation and damage across all affected organs. Systemic Lupus Erythematosus (SLE) is the most common type of lupus, and its seriousness ranges from mild to life-threatening.
+
+The causes of SLE are yet unknown but believed to be linked to genetic, hormonal, and environmental factors.
+
+A team of doctors specialized in the care of SLE patients should provide preventive care and education since this disease has no cure.
+
 This project attempts to classify white matter lesions, whether they are ischemic or demyelinating, through the usage of trained AI models.
 
 ## Tools
-> Listagem das ferramentas utilizadas (na forma de itens).
+> Jupyter Notebooks
+> 
 
 ## Data Prepare & Usage
 
@@ -59,6 +66,4 @@ This project attempts to classify white matter lesions, whether they are ischemi
 > * o que poderia ser melhorado se houvesse mais tempo?
 
 # References
-> Lista de artigos, links e referências bibliográficas (se houver).
->
-> Fiquem à vontade para escolher o padrão de referenciamento preferido pelo grupo.
+> https://www.cdc.gov/lupus/facts/detailed.html
