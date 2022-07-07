@@ -20,6 +20,7 @@ This project attempts to classify white matter lesions, whether they are ischemi
 
 - Jupyter Notebooks
 - Google Colab
+- Visual Studio Code
 
 
 ## Data Prepare & Usage
@@ -83,7 +84,7 @@ The evaluation metrics calculated with the validations sets for each split are s
 
 The best model considering our chosen metric was from split number 3, with approximately 67.48% balanced accuracy. The confusion matrix of that model is shown below.
 
-<img src="https://github.com/FCollaPi/datasci4health/blob/6f8ab744e084c6ecd705ca18a1d1fd0ea6d0c056/p4/assets/cm.png?raw=true" alt="Confusion matrix of the best model trained" width=900/>
+<img src="https://github.com/FCollaPi/datasci4health/blob/6f8ab744e084c6ecd705ca18a1d1fd0ea6d0c056/p4/assets/cm.png?raw=true" alt="Confusion matrix of the best model trained" width=600/>
 
 Ischemic stroke is named here as AVC after stroke initials in Portuguese. The same is done for multiple sclerosis (named EM).
 
