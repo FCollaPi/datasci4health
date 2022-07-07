@@ -67,20 +67,37 @@ After analysis of the data set, the Contrast attribute obtained from the GLCM an
 
 Train/validation dataset split was applied using a Stratified 5-fold algorithm. The lesion class was used to stratify the samples, but took measures to keep MRI sections from the same patient together in the same split i.e. in training or validation set) so as not to bias the trained models.
 
-## Avaliation metrics
+## Evaluation metrics
 
 From each split, the validation accuracy, balanced accuracy, the Area Under Curve (AUC) of the Receiver Operating Characteristic (ROC) and the Confusion Matrix were obtained. The metric used for selecting the best model was the balanced accuracy, which is a good measure for imbalanced datasets.
 
 ## Classification model
 
-The classification model chose was an SVM with sigmoid kernel and kernel coefficient automatically scaled`1 / (n_features * X.var())`, being `n_features` the number of features and `X.var()` the variation of each feature column.
+The classification model chosen was an SVM with sigmoid kernel and automatically scaled kernel coefficient `1 / (n_features * X.var())`, being `n_features` the number of features and `X.var()` the variation of each feature column.
+
+## Training results
+
+The evaluation metrics calculated with the validations sets for each split are shown below.
+
+| Split |  ROC_AUC | Accuracy | Balanced Accuracy |
+|------:|---------:|---------:|------------------:|
+|     1 | 0.534066 | 0.747748 |          0.534066 |
+|     2 | 0.461722 | 0.713178 |          0.461722 |
+|     3 | 0.674779 | 0.821138 |          0.674779 |
+|     4 | 0.451287 | 0.725664 |          0.451287 |
+|     5 | 0.505545 | 0.738095 |          0.505545 |
+
+The best model considering our chosen metric was from split number 3, with approximate 67.48% balanced accuracy. The confusion matrix of that model is shown below.
+
+<img src="https://github.com/FCollaPi/datasci4health/blob/6f8ab744e084c6ecd705ca18a1d1fd0ea6d0c056/p4/assets/cm.png?raw=true" alt="Confusion matrix of the best model trained" width=900/>
+
+Ischemic stroke is named here as AVC after stroke initials in Portuguese. The same is done for multiple sclerosis (named as EM).
 
 
 # Obtained Results & Discussion
 
-> Esta seção deve apresentar o resultado de predição das lesões de LES usando o classificador treinado. Também deve tentar explicar quais os atributos relevantes usados na classificação obtida
-> * apresente os resultados de forma quantitativa e qualitativa
-> * tenha em mente que quem irá ler o relatório é uma equipe multidisciplinar. Descreva questões técnicas, mas também a intuição por trás delas.
+A dataset containing mask annotated lesions on brain FLAIR MRI slices of SLE patients was provided. The model trained over ischemic stroke and multiple sclerosis MRIs was then used to classify those annotated slices according to the etiology of the annotated lesion (i.e. a classification as AVC would indicate ischemic etiology, and a classification as EM, demyelinating etiology). Predicted labels were then renamed accordingly, and the result was saved in [here](https://github.com/FCollaPi/datasci4health/blob/582314cddb1588c0ffcdbea286064d45fc78c0e0/p4/data/processed/1.0-predicted.txt). The columsn are patient ID, flair (slice) ID, and the predicted etiology (either `ischemic` or `demyelinating`).
+
 
 # Final Remarks
 
