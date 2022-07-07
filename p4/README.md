@@ -99,14 +99,15 @@ Predicted labels were then renamed accordingly, and the result was saved in [her
 
 # Final Remarks
 
-> Destacar as principais conclusões obtidas no desenvolvimento do projeto.
->
-> Destacar os principais desafios enfrentados.
->
-> Lessons Learned
->
-> Future Works
-> * o que poderia ser melhorado se houvesse mais tempo?
+Cross-comparing our results to our peers showed how much each approach generates different outputs of performance and accuracy. Therefore, it was paramount to join forces in solving this project.
+
+So, as for conclusions, understanding the value of working together to overcome challenges was a major one.
+
+Feature engineering was also very intellectually defying, and the group debates came in hand so we could move forward in developing our solution.
+
+Thinking outside the box and understanding the intersection between all the computing jobs and their health phenomena counterparts was critical to this assignment. Since we had no health consultant, we made assumptions primarily based on online literature to underpin technical choices.
+
+More time in hand could provide opportunities to enhance our model's accuracy.
 
 # References
 
