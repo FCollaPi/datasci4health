@@ -31,6 +31,11 @@ Input images were normalized using a modified hyperbolic tangent normalizer. Thi
 
 After normalization, pixel values are converted back to 8-bit integers.
 
+Provided images are as follows:
+
+![brain](https://user-images.githubusercontent.com/54454569/177859667-7422c1bd-4aeb-4217-bae2-72f6a03da80b.jpeg)
+
+
 ### Mask use
 
 The masks available were presented as 16-bit PNG images.
@@ -38,6 +43,11 @@ The masks available were presented as 16-bit PNG images.
 After reading those, the pixel values equal to the maximum value obtained (254 across all masks) were treated as true mask pixels, and pixels equal to the minimum value (253) were treated as false mask pixels.
 
 Then, the image was multiplicated by the resulting mask, from which the full lesion image was obtained.
+
+Provided masks are as follows:
+
+![mask](https://user-images.githubusercontent.com/54454569/177859683-d1563634-0565-4782-852a-5f5db489ac09.jpeg)
+
 
 ### Black corners cropping
 
