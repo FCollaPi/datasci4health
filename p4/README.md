@@ -97,6 +97,10 @@ The model trained over ischemic stroke and multiple sclerosis MRIs was then used
 
 Predicted labels were then renamed accordingly, and the result was saved in [here](https://github.com/FCollaPi/datasci4health/blob/582314cddb1588c0ffcdbea286064d45fc78c0e0/p4/data/processed/1.0-predicted.txt). The columns are patient ID, flair (slice) ID, and the predicted etiology (either `ischemic` or `demyelinating`).
 
+Our model's predictions are a little above a random classifier and can not be used to make any deeper assumptions.
+
+Albeit unsatisfying, our results were consistent in improvement over the last assignments, which shows us that, regarding due process, we could consolidate knowledge through the course of this subject and constantly enhance our ability to make decisions.
+
 
 # Final Remarks
 
