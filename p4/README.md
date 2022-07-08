@@ -44,7 +44,7 @@ After reading those, the pixel values equal to the maximum value obtained (254 a
 
 Then, the image was multiplicated by the resulting mask, from which the full lesion image was obtained.
 
-Provided masks are as follows:
+Here follows the aforementioned image after the mask was applied to it.
 
 ![mask](https://user-images.githubusercontent.com/54454569/177859683-d1563634-0565-4782-852a-5f5db489ac09.jpeg)
 
